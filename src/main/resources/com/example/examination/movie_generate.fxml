@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import java.net.URL?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="580.0" style="-fx-background-color: #2e2e2e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examination.GenerateController">
+   <children>
+      <Pane prefHeight="325.0" prefWidth="580.0" style="-fx-background-color: #1b1b1b;">
+         <children>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClicked" style="-fx-background-color: #ead2a0;" text="←">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text fill="#c19664" layoutX="143.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate film for both">
+               <font>
+                  <Font name="Algerian" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#ffedcd" layoutX="48.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your genre" wrappingWidth="81.47772979736328">
+               <font>
+                  <Font name="Bernard MT Condensed" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#ffedcd" layoutX="411.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partner`s genre">
+               <font>
+                  <Font name="Bernard MT Condensed" size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="firstGenre" layoutX="48.0" layoutY="124.0" prefHeight="40.0" prefWidth="115.0" promptText="Enter genre">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="secondGenre" layoutX="411.0" layoutY="124.0" prefHeight="40.0" prefWidth="115.0" promptText="Enter genre">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Button fx:id="generateMovie" layoutX="264.0" layoutY="266.0" mnemonicParsing="false" onAction="#onGenerateMovie" prefHeight="40.0" prefWidth="29.0" style="-fx-background-color: #ead2a0;">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@generate.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Text fill="#c19664" layoutX="217.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your option">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font>
+      </Text>
+      <ScrollPane fx:id="moviesScroll" layoutY="363.0" prefHeight="290.0" prefWidth="580.0">
+         <stylesheets>
+            <URL value="@styles.css" />
+         </stylesheets>
+         <content>
+            <VBox fx:id="moviesBox" maxWidth="570.0" prefHeight="290.0" prefWidth="570.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #2e2e2e;" />
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
